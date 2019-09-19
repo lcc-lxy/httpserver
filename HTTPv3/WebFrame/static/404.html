@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>404_达内</title>
+		<link rel="stylesheet" href="http://www.tedu.cn/404/css/index.css" />
+		
+	</head>
+	<body>
+		<div class="wrap">			
+			<img src="http://www.tedu.cn/404/img/404.jpg" alt="404" />
+			<p class="text1">纳尼！？肿么回事，啥！？</p>
+			<p class="text2">页面竟然找不到了！我和小伙伴都惊呆了 惊呆了……</p>	
+			<h2 id="showtimes" style="font-size: 28px;font-weight: bold;margin-top: 20px;">5</h2>
+			<ul class="clearfix" style="margin:40px auto 0 auto;">
+				<li class="fl">
+					<a href="javascript:history.go(-1);">返回上一页</a>
+				</li>
+				<li class="fl last">
+					<a href="/" onclick="tz()">立即返回</a>
+				</li>
+			</ul>
+		</div>
+	<script type="text/javascript">  
+		var urls = document.domain;
+		//var start = url.indexOf("//");
+		//var end = url.indexOf(".cn/");
+		//console.log("url:"+url+"start:"+start+"end:"+end);
+//设定倒数秒数  
+		var t = 10;  
+		//显示倒数秒数  
+		function showTime(){  
+			t -= 1;  
+			document.getElementById('showtimes').innerHTML= t;  
+			if(t==0){  
+				  tz();
+			}  
+			//每秒执行一次,showTime()  
+			setTimeout("showTime()",1000);  
+		}  
+		function tz(){
+		console.log(urls);
+			location.href="http://"+urls;
+		}
+		//执行showTime()  
+		showTime();  
+		</script>
+<script src="http://www.tedu.cn/zhuzhan/js/tongji.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
